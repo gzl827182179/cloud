@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+    <class>com.gleasy.platform.cloud.im.plugins.GleasyImPlugin</class>
+    <name>cloud</name>
+    <description>Gleasy即时通讯插件.</description>
+    <author>Dylan@Gleasy</author>
+    <version>1.0.0</version>
+    <date>08/19/2009</date>
+    <minServerVersion>3.5.1</minServerVersion>
+    
+    <adminconsole>
+    </adminconsole>
+
+</plugin>

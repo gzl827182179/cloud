@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>library-parent</artifactId>
+    <groupId>com.gleasy.library</groupId>
+    <version>1.0</version>
+  </parent>
+  <groupId>com.gleasy.library</groupId>
+  <artifactId>cloud-util</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>cloud-util</name>
+  <url>http://maven.apache.org</url>
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>UTF-8</encoding>
+						<!-- sun api打包错误解决  -->
+						<compilerArguments>
+							<verbose />
+							<bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
+						</compilerArguments>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<configuration>
+						<locales>en</locales>
+						<inputEncoding>UTF-8</inputEncoding>
+						<outputEncoding>UTF-8</outputEncoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    	 <dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gleasy.library</groupId>
+			<artifactId>redis-shard</artifactId>
+			<version>1.0</version>
+		</dependency>
+  </dependencies>  
+</project>
